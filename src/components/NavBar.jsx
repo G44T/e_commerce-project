@@ -1,9 +1,9 @@
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
 import Image from 'react-bootstrap/Image';
 
+import CartWidget from './CartWidget.jsx'
 
 function NavBar({ brandName, productos }) {
 
@@ -11,10 +11,10 @@ function NavBar({ brandName, productos }) {
         <Navbar collapseOnSelect expand="xl" className="bg-body-tertiary">
             <Container>
                 <Navbar.Brand href="#home">
-                    <Image 
-                        src="src/assets/logo.png" 
+                    <Image
+                        src="src/assets/logo.png"
                         width="30"
-                        height="30" 
+                        height="30"
                         roundedCircle
                         className="d-inline-block align-top" />
                     {"   "}
@@ -31,9 +31,9 @@ function NavBar({ brandName, productos }) {
                             })
                         }
                     </Nav>
-                    <Nav>                        
-                        <Nav.Link eventKey={2} href="#memes">Dank memes</Nav.Link>
-                    </Nav>
+
+                    <CartWidget />
+
                 </Navbar.Collapse>
             </Container>
         </Navbar>

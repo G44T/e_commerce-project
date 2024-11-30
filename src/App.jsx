@@ -6,7 +6,8 @@ function App() {
   const productos = [
     { id: 1, nombre: 'TV' },
     { id: 2, nombre: 'Celulares' },
-    { id: 3, nombre: 'PC' }
+    { id: 3, nombre: 'PC' },
+    { id: 4, nombre: 'Laptos' }
   ];
 
   return (
