@@ -4,15 +4,28 @@ import Navbar from 'react-bootstrap/Navbar';
 import Image from 'react-bootstrap/Image';
 
 import CartWidget from './CartWidget.jsx'
+import { useState } from 'react';
+import { Link } from 'react-router'
 
-function NavBar({ brandName, productos }) {
+
+
+function NavBar({ brandName }) {
+
+    const [categories, setCategories] = useState([
+        { id: 1, nameCategory: 'LAPTOP' },
+        { id: 2, nameCategory: 'MOUSE' },
+        { id: 3, nameCategory: 'MONITOR' },
+        { id: 4, nameCategory: 'TECLADO' },
+        { id: 5, nameCategory: 'IMPRESORA' },
+    ])
 
     return (
         <Navbar collapseOnSelect expand="xl" className="bg-body-tertiary">
             <Container>
-                <Navbar.Brand href="#home">
+
+                <Navbar.Brand as={Link} to="/">
                     <Image
-                        src="src/assets/logo.png"
+                        src="../src/assets/logo.png"
                         width="30"
                         height="30"
                         roundedCircle
@@ -20,13 +33,14 @@ function NavBar({ brandName, productos }) {
                     {"   "}
                     {brandName}
                 </Navbar.Brand>
-                <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+
                 <Navbar.Collapse id="responsive-navbar-nav">
-                    <Nav className="me-auto">
+
+                    <Nav className="me-auto">                        
                         {
-                            productos.map((producto, index) => {
+                            categories.map((category) => {
                                 return (
-                                    <Nav.Link key={index}>{producto.nombre}</Nav.Link>
+                                    <Nav.Link as={Link} to={`/category/${category.nameCategory}`} key={category.id}>{category.nameCategory}</Nav.Link>
                                 )
                             })
                         }
@@ -35,6 +49,7 @@ function NavBar({ brandName, productos }) {
                     <CartWidget />
 
                 </Navbar.Collapse>
+
             </Container>
         </Navbar>
     )
