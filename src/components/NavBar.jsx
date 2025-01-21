@@ -25,7 +25,7 @@ function NavBar({ brandName }) {
 
                 <Navbar.Brand as={Link} to="/">
                     <Image
-                        src="../assets/logo.png"
+                        src="./../assets/logo.png"
                         width="30"
                         height="30"
                         roundedCircle
