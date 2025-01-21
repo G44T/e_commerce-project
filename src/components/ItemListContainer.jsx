@@ -1,7 +1,8 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import { useParams } from 'react-router'
 
 import ItemList from './ItemList';
+import { getItemsAll, getItemsCategory } from '../firebase/db';
 
 function ItemListContainer() {
 
@@ -10,27 +11,19 @@ function ItemListContainer() {
 
     useEffect(() => {
 
-        console.log(category)
-
         if (!category) {
-            fetch(`https://my-json-server.typicode.com/G44T/productos/Productos`)
-            .then(res => res.json())
-            .then(res => setItems(res))
-        } else {
-            fetch(`https://my-json-server.typicode.com/G44T/productos/Productos?category=${category}`)
-                .then(res => res.json())
+            getItemsAll()
                 .then(res => setItems(res))
-        }
 
-        console.log(items)
+        } else {
+            getItemsCategory(category)
+                .then(res => setItems(res))
+
+        }
     }, [category]);
 
     return (
-        <>
-            <br />
-            <br />
-            <ItemList items={items} />
-        </>
+        <ItemList items={items} />
     )
 }
 

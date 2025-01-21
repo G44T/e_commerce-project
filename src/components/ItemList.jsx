@@ -5,8 +5,6 @@ import Item from './Item';
 
 function ItemList({ items }) {
 
-    console.log(items)
-
     return (
         <Container className='p-3'>
             <Row className='g-3'>

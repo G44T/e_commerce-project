@@ -1,13 +1,8 @@
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
-import Button from 'react-bootstrap/Button';
-import { useState } from 'react';
+import ItemCount from './ItemCount';
 
 function ItemDetail({ itemDetail }) {
-
-    const [count, setCount] = useState(0)
-
-    console.log(itemDetail.currencyNational)
 
     return (
         <div className="d-flex justify-content-around">
@@ -18,13 +13,7 @@ function ItemDetail({ itemDetail }) {
                     <ListGroup.Item>{`Categoria: ${itemDetail.category}`}</ListGroup.Item>
                     <ListGroup.Item>{`S/: ${itemDetail.currencyNational}`}</ListGroup.Item>
                     <ListGroup.Item>{`$: ${itemDetail.currency}`}</ListGroup.Item>
-                    <br />
-                    <Button variant="primary" size="lg" onClick={() => setCount(count + 1)}>+</Button>
-                    <br />
-                    <ListGroup.Item>{count}</ListGroup.Item>
-                    <br />
-                    <Button variant="primary" size="lg" onClick={() => setCount(count - 1)}>-</Button>
-
+                    <ItemCount item={itemDetail} />
                 </ListGroup>
             </Card>
 

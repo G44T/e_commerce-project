@@ -36,7 +36,7 @@ function NavBar({ brandName }) {
 
                 <Navbar.Collapse id="responsive-navbar-nav">
 
-                    <Nav className="me-auto">                        
+                    <Nav className="me-auto" variant="underline">
                         {
                             categories.map((category) => {
                                 return (
