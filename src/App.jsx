@@ -5,7 +5,7 @@ import ItemListContainer from './components/ItemListContainer'
 import ItemDetailsContainer from './components/ItemDetailsContainer'
 import Page404 from './components/Page404'
 import Cart from './components/Cart'
-import Checkout from './components/CheckOut'
+import Checkout from './components/Checkout'
 
 function App() {
 
