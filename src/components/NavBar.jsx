@@ -25,7 +25,7 @@ function NavBar({ brandName }) {
 
                 <Navbar.Brand as={Link} to="/">
                     <Image
-                        src="./../assets/logo.png"
+                        src="https://drive.google.com/file/d/1O8VBPNbtkeQc38DuKuuJdTCjMn3602z3/view?usp=drive_link"
                         width="30"
                         height="30"
                         roundedCircle
