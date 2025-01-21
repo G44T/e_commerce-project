@@ -14,7 +14,7 @@ function Page404() {
                     <br />
                     <h1>En Construccion</h1>
                     <br />
-                    <Image src="../src/assets/Page404.png" fluid />
+                    <Image src="https://i.postimg.cc/wv4ZtfXX/Page404.webp" fluid />
                 </Col>
                 <Col xs lg="2" />
             </Row>

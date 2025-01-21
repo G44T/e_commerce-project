@@ -11,7 +11,7 @@ function Item({ item }) {
     return (
         <Col>
             <Card style={{ width: '18rem' }}>
-                <Card.Img variant="top" src={`../src/assets/${item.img}`} />
+                <Card.Img variant="top" src={item.img} />
                 <Card.Body>
                     <Card.Title>{item.name}</Card.Title>
                     <Card.Text>

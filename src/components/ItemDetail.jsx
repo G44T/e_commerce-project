@@ -18,7 +18,7 @@ function ItemDetail({ itemDetail }) {
             </Card>
 
             <Card style={{ width: '50rem' }}>
-                <Card.Img variant="top" src={`../src/assets/${itemDetail.img}`} />
+                <Card.Img variant="top" src={itemDetail.img} />
             </Card>
         </div>
     )
